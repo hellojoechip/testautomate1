@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,3 +32,5 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          curl -X POST -H "Content-Type: application/json" -d '{"value1":"hello everyone!","value2":"","value3":""}' https://maker.ifttt.com/trigger/triggerdevops/with/key/HEEX2rf6I5oK3-_0pPq51
+
